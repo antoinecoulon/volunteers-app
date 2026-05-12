@@ -11,10 +11,12 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/ui": "^4.7.1",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
     "nuxt": "^4.4.2",
     "postgres": "^3.4.9",
+    "tailwindcss": "^4.3.0",
     "vue": "^3.5.33",
     "vue-router": "^5.0.6"
   },

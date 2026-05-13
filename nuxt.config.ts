@@ -7,5 +7,18 @@ export default defineNuxtConfig({
     strict: true,
     includeWorkspace: true
   },
-  css: ['~/assets/css/main.css']
+  css: ['~/assets/css/main.css'],
+  ui: {
+    theme: {
+      colors: [
+        'primary',
+        'secondary',
+        'tertiary',
+        'info',
+        'success',
+        'warning',
+        'error'
+      ]
+    }
+  }
 })

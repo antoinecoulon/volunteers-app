@@ -7,6 +7,12 @@ export default defineNuxtConfig({
     strict: true,
     includeWorkspace: true
   },
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabasePublishableKey: process.env.SUPABASE_PUBLISHABLE_KEY,
+    }
+  },
   css: ['~/assets/css/main.css'],
   ui: {
     theme: {

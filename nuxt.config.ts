@@ -11,6 +11,8 @@ export default defineNuxtConfig({
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
       supabasePublishableKey: process.env.SUPABASE_PUBLISHABLE_KEY,
+
+      appName: 'Westill'
     }
   },
   css: ['~/assets/css/main.css'],
@@ -25,6 +27,6 @@ export default defineNuxtConfig({
         'warning',
         'error'
       ]
-    }
-  }
+    },
+  },
 })

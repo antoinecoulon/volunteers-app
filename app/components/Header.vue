@@ -1,14 +1,36 @@
 <script setup lang="ts">
+import type { NavigationMenuItem } from '@nuxt/ui';
 
+const config = useRuntimeConfig()
+const route = useRoute()
+
+const title = config.public.appName as string ?? 'Westill'
+
+const items = computed<NavigationMenuItem[]>(() => [
+  {
+    label: 'Dashboard',
+    to: '/',
+    icon: 'i-lucide-home',
+    active: route.path.startsWith('/')
+  },
+])
 </script>
 
 
 <template>
-  <header class="h-16 bg-tertiary-900">
-    <div class="h-full flex justify-center items-center">
-      <h1 class="text-3xl text-secondary font-bold tracking-wide">
-        Westill
-      </h1>
-    </div>
-  </header>
+  <UHeader :title="title">
+    <template #title>
+      <h1>{{ title }}</h1>
+    </template>
+
+    <UNavigationMenu :items="items" />
+
+    <template #right>
+      <UColorModeButton />
+    </template>
+
+    <template #body>
+      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+    </template>
+  </UHeader>
 </template>

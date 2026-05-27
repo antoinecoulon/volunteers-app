@@ -4,5 +4,5 @@
 
 
 <template>
-  <h1 class="text-secondary">Volunteers App</h1>
+  <h1 class="text-secondary text-center my-4">Volunteers App</h1>
 </template>
